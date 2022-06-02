@@ -24,10 +24,6 @@
       "type": "float",
       "required": true
     },
-    "image": {
-      "type": "string",
-      "required": true
-    },
     "custom_field": {
       "displayName": "custom_field",
       "type": "component",
@@ -39,6 +35,16 @@
       "relation": "manyToMany",
       "target": "api::category.category",
       "inversedBy": "products"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
