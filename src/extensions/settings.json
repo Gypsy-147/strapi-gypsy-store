@@ -17,7 +17,7 @@
         "basePath": "",
         "baseUrl": "https://storage.googleapis.com/gypsy_store",
         "publicFiles": true,
-        "uniform": false,
+        "uniform": true,
         "gzip": true
     }
 }

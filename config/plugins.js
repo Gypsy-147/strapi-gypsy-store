@@ -11,7 +11,7 @@ module.exports = ({ env }) => ({
             basePath: env('GCS_BASE_PATH'),
             baseUrl: env('GCS_BASE_URL'),
             publicFiles: true,
-            uniform: false,
+            uniform: true,
             gzip: true,
         },
     },
