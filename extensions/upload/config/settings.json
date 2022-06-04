@@ -21,28 +21,3 @@
         "gzip": true
     }
 }
-
- // upload: {
-  //   config: {
-  //     provider: 'strapi-provider-upload-google-cloud-storage',
-    //   providerOptions: {
-    //       bucketName: 'gypsy_store',
-    //       publicFiles: true,
-    //       uniform: false,
-    //       serviceAccount: {
-    //         "type": "service_account",
-    //         "project_id": "arcane-mason-247003",
-    //         "private_key_id": "b60d82abd2c39784a75331ba5e8960ca1c13bf42",
-    //         "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQChkeHX613ciMI/\ne649eHQWdqHm8Qv00Wb0nQzMRQtLhM0rSrPxJbDf5Jgq9i/wg1MRt7DoWiEU2CR2\now+FPJu/wuIpEC97UNHKlh3O5EUTQtfksgGXbogK0M0gMT6Yf23B9fLDOgXlQAZq\nEzKVSu7LrwFyG7yEIZ44eroVibB2XkVAALmLJhilLQbD1bXCGLo8YIxLXx/p2Ydl\nMzgPwMqE6MMm2wYPzWwH+wyTFUAzi1r0McH4cOS0EZQDqGCv+m0hxAP+L71z09qn\nD17Rq6n0eamOLZm0mR7W4MPC0BamR3c3wbaeAb7jEqJXkDFvg+JRaa3IRHY25b2F\n+vq9w+pFAgMBAAECggEAGmLnvkqLDqwrBREe2J0mYFDJihzNthLIvKQ1ZdrUyGWM\n2Egf8P8VzsrXaxS/qYjY9SjJtHibtHrEIbfpnfnS+dNK+ifRiVMen/Y6MgKnoUim\nV4wWpHOBtjp5dYt1TJRrCWUwW1/LfLAjHAm8lhMhwpP3KXqMJAwVeeXZJBFTh1EF\nkZ6YQt8/AD4NdKJuOsrIEvd5zZ9tQRsFUom5rO3yOPyVbTU/YKxEMqhQDXEIhZSb\npJ3nLQtvziVdUmfWP0hdQIlAS0b2z1fsOhJeqSnG0enWVE1rqJ2qBhjI8V2O4W2b\niz/TSfyzqsA7Oo244EXOsquy8DvYtOd4B3kB0GejYQKBgQDNbd2iqWZdeb/Oeop6\nhrFYDCBo5oZbi1yg/6z9JVREVmh6m4DEBG90DlFfo93a/JtzSTrGzzbkisoBEzqF\nBc3YPgJGU5y2wwGL4UUl9Ry1uA/daCeA5Y0yOcLxb0T4cCFEnqYJxterQmi0RGwH\niIuUtTYsg2cJdP1kfJxjaieq+QKBgQDJWAFRu/IPCkxW0Fcxoqjsa2+M303Z6C4m\nY6I1r5HJG3dykv2JJ/VN5HVxxBC4URnUKzoNuRsT2y545bvXPKkWsqn4TUkwA7rC\nG56HhFAAOgF1gyUGRWNCaktQTTeKcXSaboxXq8zf22j93bt8ZbjGuN65HtDSOc6W\n0c5OxZhgrQKBgQChWq4/WXdB7KMvdyjV3H3nfn7mZksaFHiJLMmffHaXxpcB1qpp\nTGKOccCQspFLtCYVg2tbRN8E286W0ZehbFGmi+4Vdw8crkbErAg4LDKEuTIc4fZF\nVAh3bs8j/BXcXZaD42jfPQOhTOQY07VWpXWdNEh85ilEUFPHXekoXPUTYQKBgEXW\nbL64/kERRWFnapcg4I8AxPSMECjhTACs1nrgpySmjkwDiEWmwoN+Fu6bH2GPX/Ij\n/EL+TdIZWIk+xmTl+ZCR8DrcM+KfqIvjoJ1I26b4d8EW+CSwtLk4vV7hKb6vk85t\nQei3Ap0zMbu8yWdgsTLctQRpF+2Td4EAzRqtlykRAoGAHUTpWL3MH9FaLSzLLucV\nCztd+Ta/z5fkjsuejXmTwOpeczd6PvbJiBn90m11W1ccnR7ixw18RXQogeh7jNtV\nJUtrgQEM2ZMQ8GTy0e/SwYwePd+DJpMNWitHltDB09jiqF3q6iQOvNgr/WDlSldg\nKpw8dd6VZ2Oy4uNmVBYXb+M=\n-----END PRIVATE KEY-----\n",
-    //         "client_email": "gypsy-store@arcane-mason-247003.iam.gserviceaccount.com",
-    //         "client_id": "103477246625984278317",
-    //         "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-    //         "token_uri": "https://oauth2.googleapis.com/token",
-    //         "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-    //         "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/gypsy-store%40arcane-mason-247003.iam.gserviceaccount.com"
-    //       }, // replace `{}` with your serviceAccount JSON object
-    //       baseUrl: 'https://storage.googleapis.com/gypsy_store',
-    //       basePath: '',
-    //   },
-  //   },
-  // },
