@@ -4,7 +4,7 @@ require('dotenv').config();
 module.exports = ({ env }) => ({
   upload: {
     config: {
-        provider: 'strapi-provider-upload-google-cloud-storage',
+        provider: '@strapi-community/strapi-provider-upload-google-cloud-storage',
         providerOptions: {
             serviceAccount: JSON.parse(fs.readFileSync(process.env.GCS_SERVICE_ACCOUNT)),
             bucketName: env('GCS_BUCKET_NAME'),
