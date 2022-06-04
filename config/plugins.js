@@ -6,7 +6,7 @@ module.exports = ({ env }) => ({
     config: {
         provider: 'strapi-provider-upload-google-cloud-storage',
         providerOptions: {
-            serviceAccount: process.env.GCS_SERVICE_ACCOUNT,
+            serviceAccount: JSON.parse(fs.readFileSync(process.env.GCS_SERVICE_ACCOUNT)),
             bucketName: env('GCS_BUCKET_NAME'),
             basePath: env('GCS_BASE_PATH'),
             baseUrl: env('GCS_BASE_URL'),
