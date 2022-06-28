@@ -8,7 +8,7 @@ module.exports = createCoreController('api::order.order', ({ strapi }) => ({
 
   async create(ctx) {
     // todo
-    console.log('controll body',ctx.request.body);
+    // console.log('controll body',ctx.request.body);
     const {
       content,
     } = ctx.request.body;
@@ -23,7 +23,7 @@ module.exports = createCoreController('api::order.order', ({ strapi }) => ({
       }
       const response = await super.create(ctx);
       // const response = await super.create({ data: { publishedAt: new Date(), status: ctx.request.body.eventName, name: content.billingAddress.fullName, address: content.shippingAddress.fullAddress }})
-      console.log('controll response',response);
+      // console.log('controll response',response);
       return response;
     } catch (err) {
       console.log(err);
