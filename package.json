@@ -10,6 +10,7 @@
     "strapi": "strapi"
   },
   "dependencies": {
+    "@_sh/strapi-plugin-ckeditor": "^1.1.0",
     "@strapi-community/strapi-provider-upload-google-cloud-storage": "^4.1.7",
     "@strapi/plugin-graphql": "^4.2.2",
     "@strapi/plugin-i18n": "4.2.2",

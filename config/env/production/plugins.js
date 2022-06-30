@@ -2,6 +2,7 @@ const fs = require('fs');
 require('dotenv').config();
 
 module.exports = ({ env }) => ({
+  ckeditor: true,
   upload: {
     config: {
         provider: '@strapi-community/strapi-provider-upload-google-cloud-storage',

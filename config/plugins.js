@@ -2,6 +2,7 @@ const fs = require('fs');
 require('dotenv').config();
 
 module.exports = ({ env }) => ({
+  ckeditor: true,
   upload: {
     config: {
         provider: '@strapi-community/strapi-provider-upload-google-cloud-storage',
@@ -15,17 +16,16 @@ module.exports = ({ env }) => ({
             gzip: true,
         },
     },
-},
-  //
+  },
   graphql: {
-      config: {
-        endpoint: "/graphql",
-        shadowCRUD: true,
-        playgroundAlways: true,
-        depthLimit: 100,
-        apolloServer: {
-          tracing: false,
-          },
+    config: {
+      endpoint: "/graphql",
+      shadowCRUD: true,
+      playgroundAlways: true,
+      depthLimit: 100,
+      apolloServer: {
+        tracing: false,
         },
-      }, 
-    });
+      },
+    }, 
+  });
