@@ -12,6 +12,9 @@ module.exports = {
           image: {
             fields: ['url']
           },
+          categories: {
+            populate: '*'
+          },
           custom_field: {
             populate: '*'
           },
@@ -23,21 +26,27 @@ module.exports = {
       if (entries && Array.isArray(entries)) {
         entriesReduced = entries.reduce((acc, item) => {
           acc = acc || [];
-        //   console.log(acc);
+          let setCategories = []
+          setCategories = item.categories.map(item => {
+            return item.name
+          })
+          // setCategories.push(item.categories.name)
           acc.push({
             id: item.id,
-            img: item.image?.url || '',
-            title: item?.title|| '',
-            custom_field: item?.custom_field || {},
+            image: item.image.url || '',
+            name: item.title || '',
+            categories: setCategories,
+            inventoryManagementMethod:  "Variant",
+            variants: [
+              {
+                stock: 10,
+                allowOutOfStockPurchases:  true
+              }
+            ],
             price: item?.price || '',
-            description: item?.description || '',
-            createdAt: item?.createdAt || ''
           });
           return acc;
         }, [])
-        // console.log('strapi.services ', strapi.services);
-        // console.log('pages-report', strapi.service('api::products-all.products-all'));
-        // returning the reduced data
         return entriesReduced;
       }
     } catch (err) {
