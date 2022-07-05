@@ -5,28 +5,39 @@ module.exports = ({ env }) => ({
   ckeditor: true,
   upload: {
     config: {
-        provider: '@strapi-community/strapi-provider-upload-google-cloud-storage',
-        providerOptions: {
-            serviceAccount: JSON.parse(fs.readFileSync(process.env.GCS_SERVICE_ACCOUNT)),
-            bucketName: env('GCS_BUCKET_NAME'),
-            basePath: env('GCS_BASE_PATH'),
-            baseUrl: env('GCS_BASE_URL'),
-            publicFiles: true,
-            uniform: true,
-            gzip: true,
+      providerOptions: {
+        localServer: {
+          maxage: 300000
         },
+      },
+      // provider: '@strapi-community/strapi-provider-upload-google-cloud-storage',
+      // providerOptions: {
+      //     serviceAccount: JSON.parse(fs.readFileSync(process.env.GCS_SERVICE_ACCOUNT)),
+      //     bucketName: env('GCS_BUCKET_NAME'),
+      //     basePath: env('GCS_BASE_PATH'),
+      //     baseUrl: env('GCS_BASE_URL'),
+      //     publicFiles: true,
+      //     uniform: true,
+      //     gzip: true,
+      // },
+      breakpoints: {
+        xlarge: 1920,
+        large: 1080,
+        medium: 750,
+        small: 500,
+        xsmall: 64
+      },
     },
-  },  
-  //
+  },
   graphql: {
-      config: {
-        endpoint: "/graphql",
-        shadowCRUD: true,
-        playgroundAlways: true,
-        depthLimit: 100,
-        apolloServer: {
-          tracing: false,
-          },
+    config: {
+      endpoint: "/graphql",
+      shadowCRUD: true,
+      playgroundAlways: true,
+      depthLimit: 100,
+      apolloServer: {
+        tracing: false,
         },
-      }, 
-    });
+      },
+    }, 
+  });
