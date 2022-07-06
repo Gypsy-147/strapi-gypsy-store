@@ -1,15 +1,23 @@
-const fs = require('fs');
+// const fs = require('fs');
 require('dotenv').config();
 
 module.exports = ({ env }) => ({
   ckeditor: true,
   upload: {
     config: {
+      // provider: 'local',
+      // providerOptions: {
+      //   sizeLimit: 52428800,
+      // },
+      provider: "strapi-provider-upload-do",
       providerOptions: {
-        localServer: {
-          maxage: 300000
-        },
-      },
+        key: process.env.DO_SPACE_ACCESS_KEY,
+        secret: process.env.DO_SPACE_SECRET_KEY,
+        endpoint: process.env.DO_SPACE_ENDPOINT,
+        space: process.env.DO_SPACE_BUCKET,
+        directory: process.env.DO_SPACE_DIRECTORY,
+        cdn: process.env.DO_SPACE_CDN,
+      }
       // provider: '@strapi-community/strapi-provider-upload-google-cloud-storage',
       // providerOptions: {
       //     serviceAccount: JSON.parse(fs.readFileSync(process.env.GCS_SERVICE_ACCOUNT)),
@@ -20,13 +28,13 @@ module.exports = ({ env }) => ({
       //     uniform: true,
       //     gzip: true,
       // },
-      breakpoints: {
-        xlarge: 1920,
-        large: 1080,
-        medium: 750,
-        small: 500,
-        xsmall: 64
-      },
+      // breakpoints: {
+      //   xlarge: 1920,
+      //   large: 1080,
+      //   medium: 750,
+      //   small: 500,
+      //   xsmall: 64
+      // },
     },
   },
   graphql: {
@@ -37,7 +45,7 @@ module.exports = ({ env }) => ({
       depthLimit: 100,
       apolloServer: {
         tracing: false,
-        },
       },
-    }, 
-  });
+    },
+  },
+});
