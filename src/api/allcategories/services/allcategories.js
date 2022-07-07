@@ -10,7 +10,15 @@ module.exports = {
         fields: ['id', 'name', 'createdAt'],
         populate: {
           products: {
-            populate: '*'
+            fields: ['title', 'description', 'price'],
+            populate: {
+              image: {
+                fields: ['url']
+              },
+              custom_field: {
+                populate: '*'
+              }
+            }
           },
         }
       });
