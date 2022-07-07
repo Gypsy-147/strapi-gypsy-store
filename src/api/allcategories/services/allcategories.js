@@ -28,25 +28,10 @@ module.exports = {
       if (entries && Array.isArray(entries)) {
         entriesReduced = entries.reduce((acc, item) => {
           acc = acc || [];
-          let setCategories = []
-        //   setCategories = item.categories.map(item => {
-        //     return item.name
-        //   })
-          // setCategories.push(item.categories.name)
           acc.push({
             id: item.id,
-            // image: item.image.url || '',
-            name: item.title || '',
+            name: item.name || '',
             products: item.products
-            // categories: setCategories,
-            // inventoryManagementMethod:  "Variant",
-            // variants: [
-            //   {
-            //     stock: 10,
-            //     allowOutOfStockPurchases:  true
-            //   }
-            // ],
-            // price: item?.price || '',
           });
           return acc;
         }, [])
